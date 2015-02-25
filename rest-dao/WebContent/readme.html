@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>Just to show how to create a rest api service using Eclipse, Maven, jax-ws with jersy over resin 4 webserver </h1>
+<p>Create a dynamic web project make sure web.xml is generated along with it</p>
+<p>Configure the dynamic project to maven project, so the dependency for lib files can be added without any issues</p>
+<p>POM.XML</p>
+
+^dependencies>
+		^dependency>
+			^groupId>junit^/groupId>
+			^artifactId>junit^/artifactId>
+			^version>4.8.2^/version>
+			^scope>test^/scope>
+		^/dependency>
+
+		^dependency>
+			^groupId>com.sun.jersey^/groupId>
+			^artifactId>jersey-server^/artifactId>
+			^version>1.19^/version>
+		^/dependency>
+
+		^dependency>
+			^groupId>com.sun.jersey^/groupId>
+			^artifactId>jersey-client^/artifactId>
+			^version>1.19^/version>
+		^/dependency>
+		^dependency>
+			^groupId>com.sun.jersey^/groupId>
+			^artifactId>jersey-core^/artifactId>
+			^version>1.19^/version>
+		^/dependency>
+		^dependency>
+			^groupId>com.sun.jersey^/groupId>
+			^artifactId>jersey-json^/artifactId>
+			^version>1.19^/version>
+		^/dependency>
+		^dependency>
+			^groupId>com.sun.jersey^/groupId>
+			^artifactId>jersey-servlet^/artifactId>
+			^version>1.19^/version>
+		^/dependency>
+		^dependency>
+			^groupId>com.sun.jersey^/groupId>
+			^artifactId>jersey-bundle^/artifactId>
+			^version>1.19^/version>
+		^/dependency>
+	^/dependencies>
+
+<p>Added the servlet class, package init and path in the web.xml files </p>
+
+Example:
+<servlet>
+  <servlet-name>Jersey Rest service </servlet-name>
+  <servlet-class>com.sun.jersey.spi.container.servlet.ServletContainer</servlet-class>
+  <init-param>
+  <param-name>com.sun.jersey.configure.property.packages</param-name>
+  <param-value>com.formsdirect.rest.example</param-value>
+  </init-param>
+  <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>Jersey Rest service</servlet-name>
+  <url-pattern>/rest/*</url-pattern>
+  </servlet-mapping>
+<p>create a package</p>
+<p>Add the first class to the package and start coding............</p>
+</body>
+</html>
