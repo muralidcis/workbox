@@ -4,27 +4,43 @@ package com.formsdirect.rest.dto;
 //
 public class FeedObjects {
 
-	private String title;
-	private String description;
-	private String url;
-	public String getTitle() {
-		return title;
+
+	private int userID;
+	private int  applicationID;
+	private int applicationType;
+	private int paymentMode;
+	private int paymentStatus;
+
+	public int getUserID() {
+		return userID;
 	}
-	public void setTitle(String title) {
-		this.title = title;
+	public void setUserID(int userID) {
+		this.userID = userID;
 	}
-	public String getDescription() {
-		return description;
+	public int getApplicationID() {
+		return applicationID;
 	}
-	public void setDescription(String description) {
-		this.description = description;
+	public void setApplicationID(int applicationID) {
+		this.applicationID = applicationID;
 	}
-	public String getUrl() {
-		return url;
+	public int getApplicationType() {
+		return applicationType;
 	}
-	public void setUrl(String url) {
-		this.url = url;
+	public void setApplicationType(int applicationType) {
+		this.applicationType = applicationType;
+	}
+	public int getPaymentMode() {
+		return paymentMode;
+	}
+	public void setPaymentMode(int paymentMode) {
+		this.paymentMode = paymentMode;
+	}
+	public int getPaymentStatus() {
+		return paymentStatus;
+	}
+	public void setPaymentStatus(int paymentStatus) {
+		this.paymentStatus = paymentStatus;
 	}
 
-	//Generate Getters and Setters
+
 }

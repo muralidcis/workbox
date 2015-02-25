@@ -9,7 +9,7 @@ public Connection Get_Connection() throws Exception
 {
 try
 {
-String connectionURL = "jdbc:mysql://localhost:3306/rest";
+String connectionURL = "jdbc:mysql://localhost:3306/fd";
 Connection connection = null;
 Class.forName("com.mysql.jdbc.Driver").newInstance();
 connection = DriverManager.getConnection(connectionURL, "root", "midlodza");

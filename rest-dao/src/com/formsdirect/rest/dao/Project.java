@@ -13,14 +13,16 @@ public class Project {
 	public ArrayList<FeedObjects> GetFeeds(Connection connection ) throws Exception{
 		ArrayList<FeedObjects> feedData = new ArrayList<FeedObjects>();
 		try{
-			PreparedStatement ps = (PreparedStatement) connection.prepareStatement("SELECT title,description,url FROM website ORDER BY id DESC");
+			PreparedStatement ps = (PreparedStatement) connection.prepareStatement("select userID,applicationID,applicationType,paymentMode,paymentStatus from ApplicationTable ORDER BY paymentMode DESC");
 			ResultSet rs = ps.executeQuery();
 			while(((ResultSet) rs).next())
 			{
 			FeedObjects feedObject = new FeedObjects();
-			feedObject.setTitle(rs.getString("title"));
-			feedObject.setDescription(rs.getString("description"));
-			feedObject.setUrl(rs.getString("url"));
+			feedObject.setUserID(rs.getInt("userID"));
+			feedObject.setApplicationID(rs.getInt("applicationID"));
+			feedObject.setApplicationType(rs.getInt("applicationType"));
+			feedObject.setPaymentMode(rs.getInt("paymentMode"));
+			feedObject.setPaymentStatus(rs.getInt("paymentStatus"));
 			feedData.add(feedObject);
 			}
 			return feedData;
