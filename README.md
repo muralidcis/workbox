@@ -28,9 +28,8 @@ git merge upstream/master
 
 git checkout -b feature-x
 
-do the changes 
-#some work and some commits happen
-#some time passes
+Do the changes 
+#some work and some commits happen here
 
 git push origin feature-x
 or 
@@ -57,7 +56,7 @@ git checkout tags/2.6.7.6
 
 Step 2:
 git commit -am ""
-
+so
 Step 3: 
 I did a push like the following and end up in a mess 
 git push --force origin refs/tags/2.6.7.6:refs/tags/2.6.7.6 or git push -f origin tag 2.6.7.6
